@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+
+<!-- ── SEO ── -->
+<meta name="description" content="Comepty is a youth-led digital agency that builds premium websites and apps, crafted by a 16-year-old developer with a passion for clean design and futuristic experiences." />
+<meta name="keywords" content="Comepty, web development, digital agency, premium websites, Nigeria, youth developer" />
+<meta name="author" content="Comepty" />
+
+<!-- ── Open Graph (Facebook, WhatsApp, Discord, LinkedIn) ── -->
+<meta property="og:title" content="Comepty.org" />
+<meta property="og:description" content="Comepty is a youth-led digital agency that builds premium websites and apps, crafted by a 16-year-old developer with a passion for clean design and futuristic experiences." />
+<meta property="og:image" content="https://comepty-official.github.io/Comepty-Portfolio/image/icon.png" />
+<meta property="og:url" content="https://comepty-official.github.io/Comepty-Portfolio/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Comepty" />
+<meta property="og:locale" content="en_US" />
+
+<!-- ── Twitter / X ── -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Comepty.org" />
+<meta name="twitter:description" content="Comepty is a youth-led digital agency that builds premium websites and apps, crafted by a 16-year-old developer with a passion for clean design and futuristic experiences." />
+<meta name="twitter:image" content="https://comepty-official.github.io/Comepty-Portfolio/image/icon.png" />
+<meta name="twitter:site" content="@comepty" />
+<meta name="twitter:creator" content="@comepty" />
+
+<!-- ── Discord (uses Open Graph automatically) ── -->
+<!-- Discord reads og:title, og:description, og:image — already covered above -->
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- ── WhatsApp (uses Open Graph automatically) ── -->
+<!-- WhatsApp reads og:title, og:description, og:image — already covered above -->
+
+<!-- ── Telegram ── -->
+<meta property="og:image:alt" content="Comepty — Building Digital Futures" />
+
+<!-- ── LinkedIn ── -->
+<meta property="article:author" content="Comepty" />
+
+
+
+
+  <title>Payment — Comepty</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/payment.css" />
+</head>
+<body>
+
+<main>
+  <section class="payment-wrap">
+    <div class="payment-left reveal">
+      <!-- Order Summary -->
+      <div class="order-summary glass-card">
+        <div class="section-label" style="margin-bottom:20px">Order Summary</div>
+
+        <div class="order-plan" id="order-plan-display">
+          <div class="plan-icon-sm">💎</div>
+          <div>
+            <div class="order-plan-name" id="order-plan-name">Professional Brand System</div>
+            <div class="order-plan-desc">Premium custom development</div>
+          </div>
+        </div>
+
+        <div class="order-lines">
+          <div class="order-line">
+            <span>Base plan</span>
+            <span id="order-base-price">Custom Quote</span>
+          </div>
+          <div class="order-line">
+            <span>Revisions (3 included)</span>
+            <span>₦0</span>
+          </div>
+          <div class="order-line">
+            <span>Consultation</span>
+            <span>Free</span>
+          </div>
+        </div>
+
+        <div class="order-total">
+          <span>Total</span>
+          <span id="order-total-price">Custom Quote</span>
+        </div>
+
+        <div class="order-note">
+          <span>🔒</span>
+          <p>Payment is only processed after we agree on scope and price. No charges without your confirmation.</p>
+        </div>
+      </div>
+
+      <!-- What you get -->
+      <div class="what-you-get glass-card">
+        <h3>What's included</h3>
+        <ul id="order-features">
+          <li>✓ Full custom development</li>
+          <li>✓ Advanced UI / UX design</li>
+          <li>✓ Custom brand identity</li>
+          <li>✓ AI assistant integration</li>
+          <li>✓ 3 revision rounds</li>
+          <li>✓ Free consultation</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="payment-right reveal reveal-delay-1">
+      <div class="section-label" style="margin-bottom:8px">Checkout</div>
+      <h1 class="section-title" style="font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:4px">
+        Secure <span class="gradient-text">Payment</span>
+      </h1>
+      <p style="font-size:0.87rem;color:var(--text-3);margin-bottom:32px">Choose your preferred payment method</p>
+
+      <!-- Client Info -->
+      <div class="payment-form">
+        <div class="form-group">
+          <label class="form-label">Your Name</label>
+          <input type="text" class="form-input" placeholder="Enter your full name" id="pay-name" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" placeholder="your@email.com" id="pay-email" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">WhatsApp Number</label>
+          <input type="tel" class="form-input" placeholder="+234 XXX XXXX XXXX" id="pay-phone" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Project Details</label>
+          <textarea class="form-input" rows="3" placeholder="Brief description of what you need..." id="pay-details"></textarea>
+        </div>
+      </div>
+
+      <!-- Payment Methods -->
+      <div class="pay-methods">
+        <p class="pay-methods-label">Payment Method</p>
+
+        <div class="pay-method-card active" id="pm-bank" data-method="bank">
+          <div class="pm-radio"></div>
+          <div class="pm-icon">🏦</div>
+          <div>
+            <div class="pm-name">Bank Transfer</div>
+            <div class="pm-desc">Direct bank transfer · Details sent via WhatsApp</div>
+          </div>
+        </div>
+
+        <div class="pay-method-card" id="pm-paystack" data-method="paystack">
+          <div class="pm-radio"></div>
+          <div class="pm-icon">💳</div>
+          <div>
+            <div class="pm-name">Paystack</div>
+            <div class="pm-desc">Card, bank, USSD · Secure online payment</div>
+          </div>
+          <span class="pm-badge">Coming Soon</span>
+        </div>
+
+        <div class="pay-method-card" id="pm-flutter" data-method="flutterwave">
+          <div class="pm-radio"></div>
+          <div class="pm-icon">🌊</div>
+          <div>
+            <div class="pm-name">Flutterwave</div>
+            <div class="pm-desc">Multiple currencies · International cards</div>
+          </div>
+          <span class="pm-badge">Coming Soon</span>
+        </div>
+      </div>
+
+      <!-- Bank details panel (shown when bank selected) -->
+      <div class="bank-details" id="bank-details">
+        <div class="bd-label">Bank Transfer Details</div>
+        <div class="bd-row">
+          <span>Bank</span>
+          <strong>access bank Nigeria</strong><!-- Replace with your bank -->
+        </div>
+        <div class="bd-row">
+          <span>Account Name</span>
+          <strong>Comepty Services</strong><!-- Replace with your name -->
+        </div>
+        <div class="bd-row">
+          <span>Account Number</span>
+          <strong>XXXXXXXXXX</strong><!-- Replace with your account number -->
+        </div>
+        <p class="bd-note">After transfer, send your receipt to our WhatsApp for confirmation.</p>
+      </div>
+
+      <button class="btn btn-primary btn-lg" id="pay-submit" style="width:100%;justify-content:center;margin-top:24px">
+        <span id="pay-btn-text">Submit Order via WhatsApp</span>
+      </button>
+
+      <p class="pay-legal">By submitting, you agree to be contacted to confirm scope and pricing before any work begins.</p>
+    </div>
+  </section>
+</main>
+
+<script src="js/shell.js"></script>
+<script src="js/global.js"></script>
+<script src="js/payment.js"></script>
+</body>
+</html>

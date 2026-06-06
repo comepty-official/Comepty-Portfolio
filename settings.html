@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  
+  
+  <!-- ── SEO ── -->
+<meta name="description" content="Comepty is a youth-led digital agency that builds premium websites and apps, crafted by a 16-year-old developer with a passion for clean design and futuristic experiences." />
+<meta name="keywords" content="Comepty, web development, digital agency, premium websites, Nigeria, youth developer" />
+<meta name="author" content="Comepty" />
+
+<!-- ── Open Graph (Facebook, WhatsApp, Discord, LinkedIn) ── -->
+<meta property="og:title" content="Comepty.org" />
+<meta property="og:description" content="Comepty is a youth-led digital agency that builds premium websites and apps, crafted by a 16-year-old developer with a passion for clean design and futuristic experiences." />
+<meta property="og:image" content="https://comepty-official.github.io/Comepty-Portfolio/image/icon.png" />
+<meta property="og:url" content="https://comepty-official.github.io/Comepty-Portfolio/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Comepty" />
+<meta property="og:locale" content="en_US" />
+
+<!-- ── Twitter / X ── -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Comepty.org" />
+<meta name="twitter:description" content="Comepty is a youth-led digital agency that builds premium websites and apps, crafted by a 16-year-old developer with a passion for clean design and futuristic experiences." />
+<meta name="twitter:image" content="https://comepty-official.github.io/Comepty-Portfolio/image/icon.png" />
+<meta name="twitter:site" content="@comepty" />
+<meta name="twitter:creator" content="@comepty" />
+
+<!-- ── Discord (uses Open Graph automatically) ── -->
+<!-- Discord reads og:title, og:description, og:image — already covered above -->
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- ── WhatsApp (uses Open Graph automatically) ── -->
+<!-- WhatsApp reads og:title, og:description, og:image — already covered above -->
+
+<!-- ── Telegram ── -->
+<meta property="og:image:alt" content="Comepty — Building Digital Futures" />
+
+<!-- ── LinkedIn ── -->
+<meta property="article:author" content="Comepty" />
+
+
+
+  <title>Settings — Comepty</title>
+  <meta name="description" content="Customize your Comepty experience — theme, animations, and preferences." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/settings.css" />
+</head>
+<body>
+
+<main>
+  <section class="section settings-section">
+
+    <div class="settings-header">
+      <div class="section-label reveal">Preferences</div>
+      <h1 class="section-title reveal reveal-delay-1">
+        Site <span class="gradient-text">Settings</span>
+      </h1>
+      <p class="section-sub reveal reveal-delay-2">
+        Customize your Comepty experience. All preferences are saved locally on your device.
+      </p>
+    </div>
+
+    <div class="settings-grid">
+
+      <!-- ── Appearance ───────────────────────────────────── -->
+      <div class="settings-group glass-card reveal reveal-delay-1">
+        <div class="sg-header">
+          <div class="sg-icon">🎨</div>
+          <div>
+            <h2>Appearance</h2>
+            <p>Choose how Comepty looks on your device</p>
+          </div>
+        </div>
+
+        <div class="setting-item">
+          <div class="si-info">
+            <div class="si-title">Color Theme</div>
+            <div class="si-desc">Toggle between dark and light mode</div>
+          </div>
+          <div class="theme-toggle-group">
+            <button class="theme-btn" id="theme-dark" data-theme="dark">
+              🌙 Dark
+            </button>
+            <button class="theme-btn" id="theme-light" data-theme="light">
+              ☀️ Light
+            </button>
+          </div>
+        </div>
+
+        <!-- Theme preview -->
+      
+        
+        
+        
+        
+        
+        
+        <div class="theme-preview" id="theme-preview">
+          <div class="preview-bar">
+            <div class="preview-dot" style="background:#ff5f57"></div>
+            <div class="preview-dot" style="background:#ffbd2e"></div>
+            <div class="preview-dot" style="background:#28ca41"></div>
+            <span class="preview-url">comepty.dev</span>
+          </div>
+          <div class="preview-body">
+            <div class="preview-nav"></div>
+            <div class="preview-hero">
+              <div class="preview-title"></div>
+              <div class="preview-sub"></div>
+              <div class="preview-btn"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Animations ───────────────────────────────────── -->
+      <div class="settings-group glass-card reveal reveal-delay-2">
+        <div class="sg-header">
+          <div class="sg-icon">✨</div>
+          <div>
+            <h2>Motion & Animations</h2>
+            <p>Control animations and visual effects</p>
+          </div>
+        </div>
+
+        <div class="setting-item">
+          <div class="si-info">
+            <div class="si-title">Page Animations</div>
+            <div class="si-desc">Scroll reveals, floating elements, transitions</div>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggle-anim" checked />
+            <span class="toggle-track">
+              <span class="toggle-thumb"></span>
+            </span>
+          </label>
+        </div>
+
+        <div class="setting-item">
+          <div class="si-info">
+            <div class="si-title">Particle Effects</div>
+            <div class="si-desc">Floating particles in the background</div>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggle-particles" checked />
+            <span class="toggle-track">
+              <span class="toggle-thumb"></span>
+            </span>
+          </label>
+        </div>
+
+        <div class="setting-item">
+          <div class="si-info">
+            <div class="si-title">Reduced Motion</div>
+            <div class="si-desc">Minimal animations for accessibility</div>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggle-reduced" />
+            <span class="toggle-track">
+              <span class="toggle-thumb"></span>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <!-- ── Watermark ────────────────────────────────────── -->
+      <div class="settings-group glass-card reveal reveal-delay-3">
+        <div class="sg-header">
+          <div class="sg-icon">💧</div>
+          <div>
+            <h2>Watermark</h2>
+            <p>Manage the "Powered by Comepty" badge</p>
+          </div>
+        </div>
+
+        <div class="watermark-info">
+          <div class="wm-status" id="wm-status">
+            <span class="wm-dot"></span>
+            <span id="wm-status-text">Watermark is active</span>
+          </div>
+          <p class="wm-desc">The watermark is part of the free and standard plan. Premium users can unlock permanent removal.</p>
+        </div>
+
+        <div class="setting-item">
+          <div class="si-info">
+            <div class="si-title">Premium License</div>
+            <div class="si-desc">Enter your license key to permanently remove watermark</div>
+          </div>
+        </div>
+
+        <div class="license-input-wrap">
+          <input type="text" id="license-key" class="form-input" placeholder="CMPTY-XXXX-XXXX-XXXX" maxlength="19" />
+          <button class="btn btn-primary btn-sm" id="activate-license">Activate</button>
+        </div>
+        <div id="license-status" class="license-msg" style="display:none"></div>
+
+        <p class="wm-footnote">
+          Don't have a license? <a href="pricing.html">Upgrade your plan →</a>
+        </p>
+      </div>
+
+      <!-- ── Data & Privacy ───────────────────────────────── -->
+      <div class="settings-group glass-card reveal reveal-delay-4">
+        <div class="sg-header">
+          <div class="sg-icon">🔒</div>
+          <div>
+            <h2>Data & Privacy</h2>
+            <p>Manage your locally stored preferences</p>
+          </div>
+        </div>
+
+        <div class="setting-item">
+          <div class="si-info">
+            <div class="si-title">Stored Preferences</div>
+            <div class="si-desc">Theme, animation settings saved in localStorage</div>
+          </div>
+          <span class="si-badge">Local only</span>
+        </div>
+
+        <div class="setting-item" style="border:none">
+          <div class="si-info">
+            <div class="si-title">Reset All Settings</div>
+            <div class="si-desc">Restore all preferences to defaults</div>
+          </div>
+          <button class="btn btn-ghost btn-sm" id="reset-settings" style="color:var(--pink);border-color:rgba(244,114,182,0.3)">
+            Reset
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Save banner -->
+    <div class="save-banner" id="save-banner">
+      <span>⚡ Settings saved automatically</span>
+      <button class="btn btn-primary btn-sm" onclick="window.location.reload()">Apply & Reload</button>
+    </div>
+
+  </section>
+</main>
+
+<script src="js/shell.js"></script>
+<script src="js/global.js"></script>
+<script src="js/settings.js"></script>
+</body>
+</html>
