@@ -314,3 +314,10 @@ img, video, canvas, iframe {
   .ai-sidebar { display: none; }
   .ai-chat { height: calc(100vh - var(--nav-h)); }
 }
+
+
+
+.ai-avatar {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--cyan), var(--violet));
