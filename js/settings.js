@@ -23,6 +23,28 @@ document.addEventListener('DOMContentLoaded', () => {
   
   /* The vid */
 
+
+/* ── Video Toggle ── */
+const videoToggle = document.getElementById('video-toggle');
+
+if (videoToggle) {
+  // Default is OFF unless user turned it on
+  videoToggle.checked = localStorage.getItem('bgVideo') === 'on';
+
+  videoToggle.addEventListener('change', () => {
+    localStorage.setItem('bgVideo', videoToggle.checked ? 'on' : 'off');
+
+    // Apply immediately without reload
+    const bgWrap = document.getElementById('bg-video-wrap');
+    if (bgWrap) {
+      bgWrap.style.display = videoToggle.checked ? 'block' : 'none';
+    }
+
+    flashBanner();
+  });
+}
+
+
   /* The vid */
   
   

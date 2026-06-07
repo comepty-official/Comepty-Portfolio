@@ -18,7 +18,9 @@ function injectShell() {
 
 
 // Video Background
-const videoEnabled = localStorage.getItem("bgVideo") !== "off";
+// ✅ Fixed — default is OFF
+const videoEnabled = localStorage.getItem("bgVideo") === "on";
+
 
 const bgWrap =
 document.createElement('div');
