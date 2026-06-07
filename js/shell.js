@@ -48,26 +48,57 @@ document.body.prepend(bgOverlay);
 // Styles
 const style = document.createElement('style');
 style.textContent = `
-#bg-video-wrap{
-    position:fixed;
-    inset:0;
-    z-index:-2;
-    overflow:hidden;
+.ai-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#bg-video-wrap video{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+.ai-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
-#bg-overlay{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.0);
-    backdrop-filter:blur(3px);
-    z-index:-1;
-    pointer-events:none;
+.msg-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.msg-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.ai-avatar-xs {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-avatar-xs img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 `;
 document.head.appendChild(style);
