@@ -317,7 +317,11 @@ img, video, canvas, iframe {
 
 
 
-.ai-avatar {
-  width: 44px; height: 44px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, var(--cyan), var(--violet));
+.ai-avatar img,
+.msg-avatar img,
+.ai-avatar-xs img {
+  width: 250%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
